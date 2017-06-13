@@ -1,5 +1,4 @@
 # Tellin
-
 It's a web service project that people can communicate, share and empathize their insides.
 
 
@@ -25,4 +24,3 @@ PlanB | Back-End Manager
 Nooheat | DBA
 syeutyu | Server Architecture Design
 
-  
