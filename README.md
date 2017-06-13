@@ -1,2 +1,28 @@
 # Tellin
-사람들이 자신들의 내면을 소통 및 공유/공감할 수 있는 웹서비스 프로젝트It's a web service project that people can communicate, share and empathize their insides.
+
+It's a web service project that people can communicate, share and empathize their insides.
+
+
+## Back-End
+### Technical&Developer Stack
+
+
+**Technical Stack**  
+
+1. GitHub : progresses on branch "Back-End"  
+2. Node.js(Javascript)  
+3. Express  
+4. RESTful  
+5. MongoDB / MySQL (?????)  
+6. AWS  
+
+
+**Developer Stack**  
+
+Dev | Stack
+---|---
+PlanB | Back-End Manager
+Nooheat | DBA
+syeutyu | Server Architecture Design
+
+  
