@@ -4,6 +4,7 @@
 
 
 -Technical Stack-
+
     1. GitHub: Progresses on branch "Front-End"
     2. HTML
     3. CSS
@@ -15,6 +16,7 @@
 
 
 -Developer Stack(Table X)
+
     1. geon: Javascript, jQuery, React.js Developer
     2. KoreanJungYJ: HTML, CSS, React.js, jQuery Developer, 
     PM(Project Manager)
