@@ -17,6 +17,7 @@
 
 -Developer Stack(Table X)
 
-    1. geon: Javascript, jQuery, React.js Developer
+    1. geon: Javascript, React.js Developer
     2. KoreanJungYJ: HTML, CSS, React.js, jQuery Developer, PM(Project Manager)
-    3. unidev: Co-Developer, Json, Ajax
+    3. river-stone-jin: HTML, CSS, React.js, Front-End Manager
+    4. ChickenBeer: Cool Designer
