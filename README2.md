@@ -9,10 +9,8 @@
     2. HTML
     3. CSS
     4. Javascript
-    5. jQuery
-    6. React.js
-    7. Ajax
-    8. Json
+    5. React.js
+    6. Redux
 
 
 -Developer Stack(Table X)
