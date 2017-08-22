@@ -13,14 +13,15 @@
         <meta property="og:site_name" content="Tellin">
         <meta property="og:title" content="Tellin">
         <meta property="og:description" content="사람들의 소통과 공감을 이끌어내는 웹서비스 입니다.">
-        <!-- 임시 영어 폰트 지정 -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
         <!-- 
            <meta property="og:url" content="설정될 도메인">
            <meta property="og:image" content="사이트 내 사진">
         -->
         
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+        
         <style media="screen" type="text/css">
+            
             /* 기본 페이지 셋팅 */
             body{
                 width:100%;
@@ -41,7 +42,7 @@
                 vertical-align: baseline;
                 outline:none;
                 overflow:hidden;
-                font-family: sans-serif;
+                font-family:'NanumSquare', sans-serif;
             }
             
             /* 로고, 로그인, 회원가입이 있는 navigation*/
@@ -71,15 +72,14 @@
             nav ul li{
                 display:inline-block;
                 color:white;
-                font-family: 'Montserrat';
-                font-weight:bold;
-                letter-spacing: 1px;
+                letter-spacing:1.5px;
                 width:8.3rem;
-                height:2.4rem;
+                height:2.35rem;
                 text-align: center;
                 padding-top:0.6rem;
                 margin-top:3.6rem;
                 cursor:pointer;
+                font-weight:bold;
             }
             
             nav ul li:nth-child(3){
@@ -87,7 +87,54 @@
                 border-radius: 6rem;
             }
             
-            /*  */
+            /* title 부분 */
+            
+            #titlesCover{
+                position:fixed;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+            }
+            
+            #titlesCover h1{
+                color:rgba(255,255,255,0.9);
+                text-align: center;
+                font-weight:300;
+                letter-spacing: 2px;
+                font-size:2.3rem;
+                
+            }
+            
+            #titlesCover h2{
+                color:rgba(255,255,255,0.9);
+                text-align: center;
+                font-weight:300;
+                line-height:1.5;
+                letter-spacing: 1px;
+                font-size:1.37rem;
+                margin-top:2rem;
+            }
+            
+            #titlesCover #mainBtn{
+                width:16rem;
+                height:2.75rem;
+                background-color:#F4586D;
+                margin:0 auto;
+                display:table;
+                border-radius:50px;
+                margin-top:2rem;
+            }
+            
+            #titlesCover #mainBtn #mainBtnText{
+                color:white;
+                display:table-cell;
+                text-align: center;
+                vertical-align: middle;
+                font-size:1.1rem;
+                font-weight:bold;
+                letter-spacing: 0.5px;
+                cursor:pointer;
+            }
         </style>
     </head>
     
@@ -100,6 +147,19 @@
                 <li>LOGIN</li>
             </ul>
         </nav>
+        <div id="titlesCover">
+            <h1>숨겨왔던 내면을 드러내다</h1>
+            <h2>
+                고민거리나 비밀을 서로 공유하고
+                <br/>
+                여러분들만의 소통의 공간을 만들어보세요.
+            </h2>
+            <div id="mainBtn">
+                <div id="mainBtnText">
+                    LET'S START
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
