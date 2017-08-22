@@ -14,7 +14,7 @@ let schema = mongoose.Schema({
     like_private: { type: Number, required: true }
 }, { collection: 'BoardData' });
 
-module.exports = schema;
+module.exports = mongoose.model('BoardData', schema);
 
 /* 
     category : 카테고리
