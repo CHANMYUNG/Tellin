@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const User = require('../../database/models/user')
-exports.register = (req, res) => {
+exports.commonRegister = (req, res) => {
     const {
         email,
         nickname,
@@ -13,7 +13,7 @@ exports.register = (req, res) => {
         if (user) {
             throw new Error('email exists');
         } else {
-            return User.findOneByNickname(code);
+            return User.findOneByNickname(nickname);
         }
     }
 
@@ -21,7 +21,7 @@ exports.register = (req, res) => {
         if (user) {
             throw new Error('nickname exists');
         } else {
-            return User.create(email, password, nickname);
+            return User.create(email, password, nickname, 'common');
         }
     }
 
@@ -40,7 +40,7 @@ exports.register = (req, res) => {
 
 exports.login = (req, res) => {
     const {
-        username,
+        email,
         password
     } = req.body;
 
@@ -49,7 +49,6 @@ exports.login = (req, res) => {
     // check the user info & generate the jwt
     // check the user info & generate the jwt
     const check = (user) => {
-
         if (!user) {
             // user does not exist
             throw new Error('login failed')
@@ -60,11 +59,11 @@ exports.login = (req, res) => {
                 const p = new Promise((resolve, reject) => {
                     jwt.sign({
                             _id: user._id,
-                            username: user.username,
+                            email: user.email,
                         },
                         secret, {
                             expiresIn: '7d',
-                            issuer: "nooheat.com",
+                            issuer: "tellin.com",
                             subject: 'userInfo'
                         }, (err, token) => {
                             if (err) reject(err)
@@ -88,13 +87,14 @@ exports.login = (req, res) => {
 
     // error occured
     const onError = (error) => {
+        console.log(error);
         res.status(400).json({
             message: error.message
         })
     }
 
     // find the user
-    User.findOneByUsername(username)
+    User.findOneByEmail(email)
         .then(check)
         .then(respond)
         .catch(onError)
