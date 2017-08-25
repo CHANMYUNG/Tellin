@@ -9,6 +9,6 @@ module.exports = () => {
         console.log(`Connected to database - ${mongoose.connection.db.databaseName}`);
     });
     mongoose.connection.on('disconnected', () => {
-        this();
+        console.log(`Disconnected to database`);
     });
 };
