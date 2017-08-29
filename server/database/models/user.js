@@ -7,7 +7,10 @@ const User = Schema({
     password: { type: String, required: true },
     nickname: { type: String, required: true, unique: true },
     createdAt: { type: String, required: true },
-    signupType: { type: String, required: true }
+    signupType: { type: String, required: true },
+    last10Watched: [{ type: Schema.Types.ObjectId, ref: 'Post'}],
+    last10Liked: [{ type: Schema.Types.ObjectId, ref: 'Post'}],
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post'}],
 }, {
     collection: 'User'
 });
@@ -47,7 +50,7 @@ User.statics.findOneByEmail = function(email) {
     }).exec();
 }
 
-User.statics.findOneByNickname = function(nickname) {
+User.statics.findOneByNickname = function (nickname) {
     return this.findOne({
         nickname
     }).exec();
@@ -55,10 +58,10 @@ User.statics.findOneByNickname = function(nickname) {
 
 User.methods.verify = function (password) {
     const secret = process.env.TELLIN_PASSWORD_SECRET;
-    
+
     const encrypted = crypto.createHmac('sha1', secret)
-    .update(password)
-    .digest('base64');
+        .update(password)
+        .digest('base64');
     return this.password === encrypted;
 }
 module.exports = mongoose.model('User', User);
