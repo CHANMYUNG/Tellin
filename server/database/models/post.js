@@ -1,17 +1,20 @@
 let mongoose = require('mongoose');
-let CommetnData = require('./comment');
+const Schema = mognoose.Schema;
 
-let Post = mongoose.Schema({
+let Comment = require('./comment');
+let User = require('./user');
+
+let Post = Schema({
     category: { type: String, required: true },
     title: { type: String, required: true, },
     createdAt: { type: String, required: true },
-    writer: { type: String, required: true },
+    writer: { type: Schema.types.ObjectId, required: true },
     contents: { type: String, required: true },
-    like: { type: Number, required:true, default: 0 },
-    unlike: { type: Number, required: true, default: 0 },
-    comment: [{ type: Object, ref: 'CommetnData' }],
-    enableComment: { type: Number, required: true },
-    enableLike: { type: Number, required: true }
+    like: { type: Number, required:true, default: null },
+    unlike: { type: Number, required: true, default: null },
+    comment: [{ type: Schema.Types.ObjectId, ref: 'CommetnData' }],
+    enableComment: { type: Boolean, required: true },
+    enableLike: { type: Boolean, required: true }
 }, { collection: 'Post' });
 
 
@@ -24,8 +27,22 @@ let Post = mongoose.Schema({
     like : 공감수
     unlike : 비공감수
     comment : 댓글
-    enableComment : 댓글 작성 여부 1 : true, 0 : false
-    enableLike : 공감 여부 1 : true, 0 : false
+    enableComment : 댓글 작성 여부 true | false
+    enableLike : 공감 여부 true | false
 */
+
+Post.statics.create = function (category, title, writer, contents, enableComment, enableLike) {
+
+    const date = new Date();
+    const createdAt = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+        date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+
+    let post = new this({ category, title, writer, contents, enableComment, enableLike, createdAt });
+
+    if (enableLike) post.like = 0;
+
+    return post.save();
+}
 
 module.exports = mongoose.model('Post', Post);
