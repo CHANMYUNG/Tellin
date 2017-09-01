@@ -19,8 +19,8 @@
 
 #main-page #sidebar {
     background-color: #2f3b4c;
+    display: inline-block;
     height: 100vh;
-    position: fixed;
     width: 16%;
 }
 
@@ -34,6 +34,8 @@
 }
 
 #main-page #content {
+    display: inline-block;
+    width: 84%;
     height: 100vh;
 }
 
