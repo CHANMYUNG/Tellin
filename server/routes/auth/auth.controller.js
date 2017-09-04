@@ -38,7 +38,7 @@ exports.commonRegister = (req, res) => {
     User.findOneByEmail(email).then(findOneByNickname).then(create).then(respond).catch(onError);
 }
 
-exports.SNSRegister = (req, res) => {
+exports.facebookRegister = (req, res) => {
     const {
         email,
         nickname
