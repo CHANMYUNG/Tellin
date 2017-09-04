@@ -7,7 +7,7 @@ exports.commonRegister = (req, res) => {
         password
     } = req.body;
 
-    let newUser = null;
+    // let newUser = null;
 
     const findOneByNickname = (user) => {
         if (user) {
@@ -36,6 +36,39 @@ exports.commonRegister = (req, res) => {
     }
 
     User.findOneByEmail(email).then(findOneByNickname).then(create).then(respond).catch(onError);
+}
+
+exports.SNSRegister = (req, res) => {
+    const {
+        email,
+        nickname
+    } = req.body;
+
+    const nicknameCheck = (user) => {
+        if(user) {
+            throw new Error('email exists');
+        } else {
+            return User.findOneByNickname(nickname);
+        }
+    }
+
+    const create = (user) => {
+        if (user) {
+            throw new Error('nickname exists');
+        } else {
+            return User.create(email, '', nickname, 'facebook');
+        }
+    }
+
+    const respond = (user) => {
+        res.sendStatus(201);
+    }
+
+    const onError = (error) => {
+        res.status(409).json({
+            message: error.message
+        });
+    }
 }
 
 exports.login = (req, res) => {
@@ -98,5 +131,4 @@ exports.login = (req, res) => {
         .then(check)
         .then(respond)
         .catch(onError)
-
 }
