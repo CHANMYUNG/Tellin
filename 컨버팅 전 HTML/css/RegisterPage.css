@@ -1,0 +1,78 @@
+* {
+    font-family: 'NanumSquare';
+}
+
+body {
+    background-image: url(../images/RESOURCE/Main/background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#register-card {
+    width: 29rem;
+    margin: auto;
+    height: 40rem;
+    margin-top: 4rem;
+    background-color: white;
+    text-align: center;
+}
+
+#logo-image {
+    display: inline-block;
+    width: 35%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.register-form {
+    text-align: left;
+    width: 87%;
+    margin: auto;
+    color: #f4586d;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+}
+
+.register-form input {
+    height: 2.5rem;
+    width: 100%;
+    border: 0;
+    font-weight: 800;
+    border-bottom: 2px solid #f4586d;
+}
+
+.register-form input[type="password"] {
+    font-family: caption;
+}
+
+.register-form input[type="password"]::placeholder {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+}
+
+.register-form input::placeholder {
+    font-weight: 800;
+}
+
+#register-submit {
+    cursor: pointer;
+    background-color: #f4586d;
+    color: white;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    width: 87%;
+    margin: auto;
+    margin-bottom: 1.8rem;
+}
+
+#register-info {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#register-pp, #register-tos {
+    color: #f4586d;
+    cursor: pointer;
+}
