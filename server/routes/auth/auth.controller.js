@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken')
 const User = require('../../database/models/user')
+
 exports.commonRegister = (req, res) => {
     const {
         email,
@@ -45,7 +46,7 @@ exports.facebookRegister = (req, res) => {
     } = req.body;
 
     const nicknameCheck = (user) => {
-        if(user) {
+        if (user) {
             throw new Error('email exists');
         } else {
             return User.findOneByNickname(nickname);
@@ -91,9 +92,9 @@ exports.login = (req, res) => {
                 // create a promise that generates jwt asynchronously
                 const p = new Promise((resolve, reject) => {
                     jwt.sign({
-                            _id: user._id,
-                            email: user.email,
-                        },
+                        _id: user._id,
+                        email: user.email,
+                    },
                         secret, {
                             expiresIn: '7d',
                             issuer: "tellin.com",
