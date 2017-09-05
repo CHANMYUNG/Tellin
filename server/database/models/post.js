@@ -10,9 +10,9 @@ let Post = Schema({
     createdAt: { type: String, required: true },
     writer: { type: Schema.types.ObjectId, required: true },
     contents: { type: String, required: true },
-    like: { type: Number, required:true, default: null },
+    like: { type: Number, required: true, default: null },
     unlike: { type: Number, required: true, default: null },
-    comment: [{ type: Schema.Types.ObjectId, ref: 'CommetnData' }],
+    comment: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     enableComment: { type: Boolean, required: true },
     enableLike: { type: Boolean, required: true }
 }, { collection: 'Post' });
@@ -31,7 +31,7 @@ let Post = Schema({
     enableLike : 공감 여부 true | false
 */
 
-Post.statics.create = function (category, title, writer, contents, enableComment, enableLike) {
+Post.statics.create = function(category, title, writer, contents, enableComment, enableLike) {
 
     const date = new Date();
     const createdAt = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +

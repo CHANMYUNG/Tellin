@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const crypto = require('crypto');
+let Post = require('./post');
 
 const User = Schema({
     email: { type: String, required: true, unique: true },
@@ -12,8 +13,8 @@ const User = Schema({
     last10Liked: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
     posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 }, {
-        collection: 'User'
-    });
+    collection: 'User'
+});
 
 /*
 email : 사용자 이메일 (로그인에 사용)
@@ -22,7 +23,7 @@ nickname : 사용자 닉네임
 entryDate : 계정 회원가입 날짜
 signupType : 보류중 :: 회원가입 타입 (common, facebook)
  */
-User.statics.create = function (email, password, nickname, signupType) {
+User.statics.create = function(email, password, nickname, signupType) {
     if (signupType === 'common') {
         // 일반 회원가입
         const secret = process.env.TELLIN_PASSWORD_SECRET;
@@ -62,19 +63,19 @@ User.statics.create = function (email, password, nickname, signupType) {
     }
 }
 
-User.statics.findOneByEmail = function (email) {
+User.statics.findOneByEmail = function(email) {
     return this.findOne({
         email
     }).exec();
 }
 
-User.statics.findOneByNickname = function (nickname) {
+User.statics.findOneByNickname = function(nickname) {
     return this.findOne({
         nickname
     }).exec();
 }
 
-User.methods.verify = function (password) {
+User.methods.verify = function(password) {
     const secret = process.env.TELLIN_PASSWORD_SECRET;
 
     const encrypted = crypto.createHmac('sha1', secret)
