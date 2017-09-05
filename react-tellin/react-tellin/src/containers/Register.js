@@ -13,25 +13,25 @@ class Register extends Component{
                             InputInfo: "이메일",
                             InputId: "email",
                             InputType: "email",
-                            InputPlaceholder: "abc1234@tellin.com"
+                            InputPlaceholder: "이메일을 입력해주세요."
                         },
                         {
                             InputInfo: "비밀번호",
                             InputId: "password",
                             InputType: "password",
-                            InputPlaceholder: "defg5678"
+                            InputPlaceholder: "비밀번호를 입력해주세요."
                         },
                         {
                             InputInfo: "비밀번호 재확인",
                             InputId: "password-check",
                             InputType: "password",
-                            InputPlaceholder: "defg5678"
+                            InputPlaceholder: "비밀번호를 다시 입력해주세요."
                         },
                         {
                             InputInfo: "닉네임",
                             InputId: "nickname",
                             InputType: "text",
-                            InputPlaceholder: "abc1234"
+                            InputPlaceholder: "닉네임을 입력해주세요."
                         }
                     ]
                 }/>
