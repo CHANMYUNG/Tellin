@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 
 const authMiddleware = (req, res, next) => {
     // 요청헤더나 Query에서 토큰 값 추출 
-    const token = req.headers['x-access-token'] || req.query.token
+    const token = req.cookies['x-access-token'];
 
     // 토큰이 존재하지 않을 때 :: 401 Unauthorized 반환
     if (!token) {

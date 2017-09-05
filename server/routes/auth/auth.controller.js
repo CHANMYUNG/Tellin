@@ -76,7 +76,7 @@ exports.login = (req, res) => {
         email,
         password
     } = req.body;
-
+    
     const secret = req.app.get('jwt-secret')
 
     // check the user info & generate the jwt
@@ -97,7 +97,8 @@ exports.login = (req, res) => {
                         secret, {
                             expiresIn: '7d',
                             issuer: "tellin.com",
-                            subject: 'userInfo'
+                            subject: 'userInfo',
+                            expiresIn: '1h'
                         }, (err, token) => {
                             if (err) reject(err)
                             resolve(token)
@@ -112,9 +113,9 @@ exports.login = (req, res) => {
 
     // respond the token 
     const respond = (token) => {
+        res.cookie('x-access-token', token);
         res.json({
             message: 'logged in successfully',
-            token
         })
     }
 

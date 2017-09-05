@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const database = require('./database');
 const bodyParser = require('body-parser');
 const router = require('./routes');
-
+const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(morgan('dev'));
@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+
+app.use(cookieParser());
 
 app.set('port', 8080);
 
