@@ -1,6 +1,0 @@
-{
-  "short_name": "Tellin",
-  "name": "Tellin-Inner Communication",
-  "start_url": "./public/index.html",
-  "display": "standalone"
-}
