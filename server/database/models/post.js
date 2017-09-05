@@ -22,7 +22,7 @@ let Post = Schema({
     category : 카테고리
     title : 제목
     createdAt : 작성일
-    writer : 작성자
+    writer : 작성자 _id
     contents : 게시글 내용
     like : 공감수
     unlike : 비공감수
