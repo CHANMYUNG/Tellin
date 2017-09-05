@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-const Schema = mognoose.Schema;
+const Schema = mongoose.Schema;
 
 let Comment = require('./comment');
 let User = require('./user');
@@ -8,7 +8,7 @@ let Post = Schema({
     category: { type: String, required: true },
     title: { type: String, required: true, },
     createdAt: { type: String, required: true },
-    writer: { type: Schema.types.ObjectId, required: true },
+    writer: { type: Schema.Types.ObjectId, required: true },
     contents: { type: String, required: true },
     like: { type: Number, required: true, default: null },
     unlike: { type: Number, required: true, default: null },
