@@ -10,8 +10,8 @@ let Post = Schema({
     createdAt: { type: String, required: true },
     writer: { type: Schema.types.ObjectId, required: true },
     content: { type: String, required: true },
-    like: { type: Number, required: true, default: null },
-    unlike: { type: Number, required: true, default: null },
+    like: { type: Number, required: true, default: 0 },
+    unlike: { type: Number, required: true, default: 0 },
     comment: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     enableComment: { type: Boolean, required: true },
     enableLike: { type: Boolean, required: true }
