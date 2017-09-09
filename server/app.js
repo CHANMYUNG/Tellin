@@ -3,7 +3,6 @@ const morgan = require('morgan');
 const database = require('./database');
 const bodyParser = require('body-parser');
 const router = require('./routes');
-const mRouter = require('./routes/board/router');
 const cookieParser = require('cookie-parser');
 const app = express();
 
@@ -23,7 +22,6 @@ app.set('port', 8080);
 app.set('jwt-secret', process.env.TELLIN_JWT_SECRET);
 
 app.use('/', router);
-app.use('/', mRouter);
 
 app.listen(app.get('port'), () => {
     console.log(`NOW, SERVER IS RUNNING ON ${app.get('port')} PORT.`);
