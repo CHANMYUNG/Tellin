@@ -39,7 +39,9 @@ module.exports = {
     },
 
     list: (req, res) => {
-
+        res.json(Post.find({
+            category: req.body.category
+        }));
     },
 
     inquire: (req, res) => {
