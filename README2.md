@@ -1,6 +1,6 @@
-**Front-End**
+<h1>Front-End</h1>
 
-**Technical&Developer Stack**
+<h2>Technical&Developer Stack</h2>
 
 
 -Technical Stack-
