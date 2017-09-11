@@ -1,3 +1,14 @@
+#landing {
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    margin: 0 auto;
+    background-image: url(../images/RESOURCE/Main/background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
 #landing * {
     box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -8,16 +19,6 @@
     outline: none;
     overflow:auto;
     font-family: 'NanumSquare', sans-serif;
-}
-
-#landing {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    background-image: url(../images/RESOURCE/Main/background.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
 }
 
 /* 로고, 로그인, 회원가입이 있는 navigation*/
