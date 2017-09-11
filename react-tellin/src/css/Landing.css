@@ -21,7 +21,7 @@ body {
     border: 0;
     vertical-align: baseline;
     outline: none;
-    overflow:auto;
+    overflow-x:hidden;
     font-family: 'NanumSquare', sans-serif;
 }
 
@@ -30,7 +30,6 @@ body {
 #landing nav {
     width: 100%;
     height: 10rem;
-    overflow:hidden;
 }
 
 #landing nav #pageLogo {
@@ -42,6 +41,7 @@ body {
 }
 
 #landing nav ul {
+    overflow:hidden;
     display: inline-block;
     width: 30rem;
     height: 10rem;
@@ -72,14 +72,16 @@ body {
 /* title 부분 */
 
 #landing #titlesCover {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
 /*
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-*/
+    반응형시 margin-top 추가
+
     width: 100%;
     margin-top:7rem;
+*/
 }
 
 #landing #titlesCover h1 {
@@ -121,7 +123,7 @@ body {
     cursor: pointer;
 }
 
-@media all and (max-width:700px){
+@media all and (max-width:830px){
     #landing nav #pageLogo{
         display:block;
         margin:0 auto;
@@ -138,6 +140,12 @@ body {
     #landing nav ul li{
         margin-right:2rem;
     }
+
+    #landing #titlesCover{
+        width:100%;
+        margin-top:5rem;
+    }
+
 }
 
 @media all and (max-width:504px){
@@ -146,7 +154,15 @@ body {
     }
 
     #landing #titlesCover{
+        width:100%;
         margin-top:3rem;
+    }
+}
+
+@media all and (max-height : 380px){
+    #landing #titlesCover{
+        position:relative;
+        top:4rem;
     }
 }
 
