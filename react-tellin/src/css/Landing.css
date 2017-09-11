@@ -1,13 +1,17 @@
-#landing {
-    width: 100%;
-    height: 100vh;
-    position:relative;
+body {
     margin: 0 auto;
+    width:100%;
+    height:100%;
     background-image: url(../images/RESOURCE/Main/background.png);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
+
+/*#landing {
+    width: 100%;
+    height: 100%;
+}*/
 
 #landing * {
     box-sizing: border-box;
@@ -118,6 +122,12 @@
 }
 
 @media all and (max-width:700px){
+    #landing nav #pageLogo{
+        display:block;
+        margin:0 auto;
+        margin-top:1rem;
+    }
+
     #landing nav ul{
         width:100%;
         display:block;
@@ -133,6 +143,10 @@
 @media all and (max-width:504px){
     #landing nav ul{
         display:none;
+    }
+
+    #landing #titlesCover{
+        margin-top:3rem;
     }
 }
 
