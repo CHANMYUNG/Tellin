@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+#root, #root>div{
+    height: 100%;
+}
+
+.modal{
+    height: 67%;
+    width: 60%;
+    background-color: #fff;
+}
+
+.modal-header{
+    border-bottom: 1px solid #e5e5e5;
+    height: auto;
+}
+
+.modal-header>h3{
+    padding: 10px 0px 10px 20px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modal-header>button{
+    background-color: #fff;
+    color: #505050;
+    border-style: none;
+    float: right;
+    font-size: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radio-btn-list{
+    text-align: center;
+    height: auto;
+    padding: 2% 0 3% 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.radio-btn-list>h4{
+    margin: 0px 0px 10px 12px;
+    font-size: 14px;
+    color: #b1b1b1;
+    text-align: left;
+}
+.radio-btn{
+    height: auto;
+    display: inline-block;
+    width: 45%;
+    margin: 0px 2%;
+}
+
+.radio-btn>input[type="radio"]{
+    display: none;
+}
+
+.radio-label{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding:10px 0;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.radio-label:hover{
+    background-color: #d2d2d2;
+}
+
+.checkbox-list{
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 2% 0 3% 0;
+}
+
+
+.checkbox-list>h4{
+    margin: 0 15px;
+    font-size: 14px;
+    color: #b1b1b1;
+    text-align: left;
+}
+
+.checkbox{
+    display: inline-block;
+    padding: 10px;
+    width: 18%;
+}
+
+.checkbox>label{
+    display: inline-block;
+    width: 80%;
+}
+
+.file-uploader{
+    padding: 2% 0 3% 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.file-uploader>h4{
+    margin: 0 15px;
+    font-size: 14px;
+    color: #b1b1b1;
+    text-align: left;
+}
+
+input[type=file]{
+    display: none;
+}
+
+.attach-file{
+    width: 95%;
+    color: #d2d2d2;
+    font-weight: bold;
+    text-align: center;
+    margin:0 auto;
+    margin-top:2%;
+    padding: 1% 0;
+    border : 1px solid #f4f4f4;
+}
+.attach-file:hover{
+    border: 1px solid #f093fb;
+    background-color: #f093fb;
+    cursor: pointer;
+    color: #fff;
+}
+
+.modal-footer>button{
+    width: 12%;
+    font-size: 16px;
+    padding: 0.8% 0;
+    margin: 2% 1%;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+}
+
+.modal-footer>button:nth-child(2){
+    background-color: #e3e3e3;
+    border:1px solid #e3e3e3;
+}
+
+
+.modal-footer>button:nth-child(1){
+    background-color: #f093fb;
+    border:1px solid #f093fb;
+}
