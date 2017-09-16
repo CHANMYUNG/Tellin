@@ -7,6 +7,8 @@ import Register from './containers/Register';
 import Login from './containers/Login';
 import PostingSetupModal from './components/PostingSetupModal';
 
+import MainLayout from './components/MainLayout';
+
 const root = document.getElementById('root');
 
 ReactDOM.render((
@@ -15,7 +17,12 @@ ReactDOM.render((
             <Route exact path='/' component={Landing}/> 
             <Route path = "/register" component = {Register}/>
             <Route path = "/login" component = {Login}/>
+            <Route path = "/main" component = {MainLayout}/>
             <Route path="/post" component={PostingSetupModal}/>
         </div>
     </BrowserRouter>
 ), root);
+
+/*
+    Main Layout부분 라우팅 후에 수정해야됨.
+ */

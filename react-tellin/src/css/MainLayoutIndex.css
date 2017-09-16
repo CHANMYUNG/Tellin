@@ -1,0 +1,18 @@
+/* 문제가 생길 시 body로 바꿀 것 */
+#mainWrapper{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#mainWrapper *{
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: none;
+    overflow:auto;
+    font-family: 'NanumSquare', sans-serif;
+}
