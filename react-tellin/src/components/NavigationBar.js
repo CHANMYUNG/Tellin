@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Landing.css';
 
 class NavigationBar extends Component{
+
     render(){
         return(
             <nav>
@@ -18,6 +19,39 @@ const PageLogo = (props) => {
     );
 }
 
+/*
+<DropdownBox ImgUrl = {require('../images/RESOURCE/Main/drop_down_arrow.png')}/>
+const DropdownBox = (props) => {
+    return(
+        <div id = "dropCover">
+            <img src = {props.ImgUrl} alt = "dropDown" id = "dropDown"/>
+        </div>
+    );
+}
+*/
+
+/*
+const CoverLists = (props) => {
+    <CoverLists lists = {
+                [
+                    {"listName" : "ABOUT"},
+                    {"listName" : "REGISTER"},
+                    {"listName" : "LOGIN"}
+                ]
+            }/>
+    return(
+        <div id = "dropCoverList">
+            {props.lists.map((info, i) => {
+                return(
+                    <div className = "coverLists" key = {i}>
+                        {info.listName}
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+*/
 const NavLists = (props) => {
     return(
         <ul>

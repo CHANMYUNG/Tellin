@@ -23,6 +23,7 @@ body {
     outline: none;
     overflow-x:hidden;
     font-family: 'NanumSquare', sans-serif;
+    transition:0.5s;
 }
 
 /* 로고, 로그인, 회원가입이 있는 navigation*/
@@ -67,6 +68,8 @@ body {
     background-color: #F4586D;
     border-radius: 6rem;
 }
+
+/* 드롭다운 */
 
 
 /* title 부분 */
@@ -149,6 +152,11 @@ body {
 }
 
 @media all and (max-width:504px){
+    #landing nav #pageLogo{
+        position:relative;
+        top:3rem;
+    }
+
     #landing nav ul{
         display:none;
     }
