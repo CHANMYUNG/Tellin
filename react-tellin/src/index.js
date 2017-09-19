@@ -6,9 +6,9 @@ import Landing from './containers/Landing';
 import Register from './containers/Register';
 import Login from './containers/Login';
 import PostingSetupModal from './components/PostingSetupModal';
+import MainLayout from './components/MainLayout';
 import './css/Index.css';
 
-import MainLayout from './components/MainLayout';
 
 const root = document.getElementById('root');
 

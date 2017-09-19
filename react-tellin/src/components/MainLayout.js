@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
-import '../css/MainLayoutIndex.css';
-import '../css/MainLayoutAside.css';
-import '../css/MainLayoutHeader.css';
-import MainHeaderLayout from '../components/MainHeaderLayout';
-import MainSideBarLayout from '../components/MainSideBarLayout';
+import '../css/MainLayout.css';
+import MainHeaderLayout from './MainHeaderLayout';
+import MainSideLayout from './MainSideLayout';
 
 class MainLayout extends Component{
     render(){
         return(
             <div id = "mainWrapper">
-                <MainHeaderLayout/>
-                <div id = "layoutSection">
-                    <MainSideBarLayout/>
+                <MainSideLayout/>
+                <div className = "sectionLayout">
+                    <MainHeaderLayout/>
                     {this.props.children}
                 </div>
             </div>

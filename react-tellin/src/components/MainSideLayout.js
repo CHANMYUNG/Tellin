@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 class MainSideBarLayout extends Component{
     render(){
         return(
-            <div>
+            <div className = "sideLayout">
+
             </div>
         );
     }
