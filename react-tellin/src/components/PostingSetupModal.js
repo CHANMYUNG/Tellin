@@ -4,11 +4,11 @@ import '../css/PostingSetupModal.css';
 export default class PostingSetupModal extends Component {
   render() {
     return (
-        <div className="modal">
-          <ModalHeader title="게시물 설정"/>
-          <ModalContent/>
-          <ModalFooter/>
-        </div>
+          <div className="modal">
+              <ModalHeader title="게시물 설정"/>
+              <ModalContent/>
+              <ModalFooter/>
+          </div>
     )
   }
 }

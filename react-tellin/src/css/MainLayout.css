@@ -1,0 +1,26 @@
+#mainWrapper{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    font-size:0;
+    text-align: center;
+}
+
+/* side 부분 layout */
+.sideLayout{
+    width:17rem;
+    height:100%;
+    display:inline-block;
+    vertical-align: top;
+}
+
+
+
+/* main 부분 layout */
+.sectionLayout{
+    width:calc(100% - 17rem);
+    height:100%;
+    background-color:green;
+    display:inline-block;
+    vertical-align: top;
+}
