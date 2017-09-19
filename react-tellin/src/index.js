@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Landing from './containers/Landing';
 import Register from './containers/Register';
