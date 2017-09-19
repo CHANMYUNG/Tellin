@@ -22,7 +22,8 @@ const LogoPart = (props) => {
 class MainNavigation extends Component{
     render(){
         return(
-            <div>
+            <div id = "navPart">
+                
             </div>
         );
     }
