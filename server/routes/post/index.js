@@ -6,4 +6,7 @@ router.route('/post')
     .post(auth, controller.upload)
     .get(auth, controller.list);
 
+router.route('/like/:pid')
+    .post(auth, controller.like)
+    .delete(auth, controller.unlike);
 module.exports = router;

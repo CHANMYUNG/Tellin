@@ -9,8 +9,8 @@ const User = Schema({
     nickname: { type: String, required: true, unique: true },
     entryDate: { type: String, required: true },
     signupType: { type: String, required: true },
-    last10Watched: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-    last10Liked: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+    watched: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+    liked: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
     posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 }, {
     collection: 'User'
@@ -63,19 +63,19 @@ User.statics.create = function(email, password, nickname, signupType) {
     }
 }
 
-User.statics.findOneByEmail = function(email) {
+User.statics.findOneByEmail = function (email) {
     return this.findOne({
         email
     }).exec();
 }
 
-User.statics.findOneByNickname = function(nickname) {
+User.statics.findOneByNickname = function (nickname) {
     return this.findOne({
         nickname
     }).exec();
 }
 
-User.methods.verify = function(password) {
+User.methods.verify = function (password) {
     const secret = process.env.TELLIN_PASSWORD_SECRET;
 
     const encrypted = crypto.createHmac('sha1', secret)
@@ -85,4 +85,15 @@ User.methods.verify = function(password) {
     return this.password === encrypted;
 }
 
+User.methods.like = function (pid) {
+    this.liked.unshift(pid);
+
+    return this.save();
+}
+
+User.methods.unlike = function (pid) {
+    this.liked.splice(this.liked.indexOf(pid), 1);
+
+    return this.save();
+}
 module.exports = mongoose.model('User', User);

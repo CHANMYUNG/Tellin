@@ -114,7 +114,7 @@ exports.login = (req, res) => {
 
     // respond the token 
     const respond = (token) => {
-        res.cookie('x-access-token', token);
+        res.cookie('tellin-x-access-token', token);
         res.json({
             message: 'logged in successfully',
         })
