@@ -1,7 +1,5 @@
-body {
-    margin: 0 auto;
-    width:100%;
-    height:100%;
+#landing {
+
     background-image: url(../images/RESOURCE/Main/background.png);
     background-attachment: fixed;
     background-position: center;
@@ -12,19 +10,6 @@ body {
     width: 100%;
     height: 100%;
 }*/
-
-#landing * {
-    box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    outline: none;
-    overflow-x:hidden;
-    font-family: 'NanumSquare', sans-serif;
-    transition:0.5s;
-}
 
 /* 로고, 로그인, 회원가입이 있는 navigation*/
 

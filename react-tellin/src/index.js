@@ -6,6 +6,7 @@ import Landing from './containers/Landing';
 import Register from './containers/Register';
 import Login from './containers/Login';
 import PostingSetupModal from './components/PostingSetupModal';
+import './css/Index.css';
 
 import MainLayout from './components/MainLayout';
 

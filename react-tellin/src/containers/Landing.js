@@ -6,10 +6,10 @@ import "../css/Landing.css";
 class Landing extends Component{
     render(){
         return(
-            <div id="landing">
+            <body id="landing">
                 <NavigationBar/>
                 <TitlesCover/>
-            </div>
+            </body>
         );
     }
 }
