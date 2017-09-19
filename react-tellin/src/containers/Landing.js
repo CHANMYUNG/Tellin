@@ -7,8 +7,10 @@ class Landing extends Component{
     render(){
         return(
             <body id="landing">
-                <NavigationBar/>
-                <TitlesCover/>
+                <div id = "overlay">
+                    <NavigationBar/>
+                    <TitlesCover/>
+                </div>
             </body>
         );
     }

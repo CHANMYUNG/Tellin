@@ -1,13 +1,18 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-#register {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-image: url(../images/RESOURCE/Main/background.png);
+#register #overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+
+    background-image : url('../images/RESOURCE/Main/background.png');
     background-attachment: fixed;
+    background-size:cover;
     background-position: center;
-    background-size: cover;
 }
 
 #register * {
@@ -46,7 +51,7 @@
     margin: auto;
     color: #f4586d;
     font-weight: 800;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 2rem;
 }
 

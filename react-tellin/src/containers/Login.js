@@ -6,7 +6,9 @@ class Login extends Component{
     render(){
         return(
             <div id = "login">
-                <LoginForm/>  
+                <div id = "overlay">
+                    <LoginForm/>  
+                </div>
             </div>
         );
     }
