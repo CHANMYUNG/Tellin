@@ -40,7 +40,7 @@
 
 #navPart #userInfo{
     width:100%;
-    height:8rem;
+    height:6.5rem;
 }
 
 
@@ -53,7 +53,7 @@
 #navImgsCover .navImgs:hover{
     background-color:#263241;
     cursor:pointer;
-    border-left:2.7px solid #ef92fa;
+    border-left:3px solid #ef92fa;
 }
 
 #navImgsCover .navImgs:hover .imgTitles{
@@ -90,7 +90,32 @@
     right:8.65rem;
 }
 
+/* 분리 선*/
+#navLine{
+    width:12.5rem;
+    height:1px;
+    background-color:#465262;
+    margin:0 auto;
+    margin-top:1rem;
+}
 
+/* 추가 navs */
+#etcNavCover{
+    width:100%;
+    height:15rem;
+}
+.etcNavs{
+    font-size:0.85rem;
+    color:#b0bec5;
+    position: relative;
+    right:4.5rem;
+    top:1rem;
+    margin-top:1rem;
+}
+
+.etcNavs span{
+    cursor:pointer;
+}
 
 /* main 부분 layout */
 .sectionLayout{

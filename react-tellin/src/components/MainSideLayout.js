@@ -97,6 +97,15 @@ class MainNavigation extends Component{
                         }
                     ]
                 }/>
+                <NavLine/>
+                <UserNavs users = {
+                    [
+                        {"users" : "소통작성"},
+                        {"users" : "공지사항"},
+                        {"users" : "문의하기"},
+                        {"users" : "회원탈퇴"}
+                    ]
+                }/>
             </div>
         );
     }
@@ -112,6 +121,13 @@ class UserInfo extends Component{
     }
 }
 
+const NavLine = () => {
+    return(
+        <div id = "navLine">
+        </div>
+    );
+}
+
 const NavImgs = (props) => {
     return(
         <div id = "navImgsCover">
@@ -123,6 +139,22 @@ const NavImgs = (props) => {
                         <div className = "imgTitles" id = {imgs.IdName}>
                             {imgs.ImgTitle}
                         </div>
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
+const UserNavs = (props) => {
+    return(
+        <div id = "etcNavCover">
+            {props.users.map((info, i) => {
+                return(
+                    <div key = {i} className = "etcNavs">
+                        <span>
+                            {info.users}
+                        </span>
                     </div>
                 );
             })}
