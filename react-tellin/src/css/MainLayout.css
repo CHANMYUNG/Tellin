@@ -1,9 +1,9 @@
+
 #mainWrapper{
     width:100%;
     height:100%;
     margin:0 auto;
     font-size:0;
-    text-align: center;
 }
 
 /* side 부분 layout */
@@ -13,6 +13,7 @@
     display:inline-block;
     vertical-align: top;
     overflow:hidden;
+    transition:0.5s;
 }
 
 /* 로고 부분 */
@@ -36,6 +37,8 @@
     width:100%;
     height:calc(100% - 4rem);
     background-color:#2f3a4c;
+    overflow:hidden;
+    text-align: center;
 }
 
 #navPart #userInfo{
@@ -133,4 +136,42 @@
     height:4rem;
     box-shadow:0 0 4px darkgray;
     background-color:white;
+    overflow:hidden;
 }
+
+/* 헤더의 left 이미지들 위치 */
+.headerLayout .headerLeftImgs{
+    display:inline-block;
+    vertical-align: top;
+    cursor:pointer;
+}
+
+.headerLeftImgs#leftArrow{
+    margin-top:1.6rem;
+    margin-left:1.75rem;
+}
+
+.headerLeftImgs#headerMenu{
+    margin-top:1.3rem;
+    margin-left:3px;
+}
+
+.headerLeftImgs#headerSearch{
+    margin-top:1.3rem;
+    margin-left:1.7rem;
+}
+
+/* 헤더의 right 이미지들 위치 */
+.headerRightImgs{
+    float:right;
+    margin-right:1.7rem;
+    margin-top:1.35rem;
+    cursor:pointer;
+}
+
+
+/* main layout에 다음 값들 적용할 것 */
+/*
+    min-width:800px;
+    min-height:650px;
+*/

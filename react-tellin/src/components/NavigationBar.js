@@ -2,12 +2,27 @@ import React, { Component } from 'react';
 import '../css/Landing.css';
 
 class NavigationBar extends Component{
-
     render(){
         return(
             <nav>
                 <PageLogo ImgUrl = {require("../images/RESOURCE/Main/logo_tellin.png")}/>
-                <NavLists menus ={["ABOUT", "REGISTER", "LOGIN"]}/>
+                <NavLists 
+                    menus ={
+                        [
+                            {
+                                "menuName" : "ABOUT",
+                                "Route" : "https://www.facebook.com"
+                            },
+                            {
+                                "menuName" : "REGISTER",
+                                "Route" : "/register"
+                            },
+                            {
+                                "menuName" : "LOGIN",
+                                "Route" : "/login"
+                            }
+                        ]
+                    }/>
             </nav>
         );
     }
@@ -19,44 +34,15 @@ const PageLogo = (props) => {
     );
 }
 
-/*
-<DropdownBox ImgUrl = {require('../images/RESOURCE/Main/drop_down_arrow.png')}/>
-const DropdownBox = (props) => {
-    return(
-        <div id = "dropCover">
-            <img src = {props.ImgUrl} alt = "dropDown" id = "dropDown"/>
-        </div>
-    );
-}
-*/
-
-/*
-const CoverLists = (props) => {
-    <CoverLists lists = {
-                [
-                    {"listName" : "ABOUT"},
-                    {"listName" : "REGISTER"},
-                    {"listName" : "LOGIN"}
-                ]
-            }/>
-    return(
-        <div id = "dropCoverList">
-            {props.lists.map((info, i) => {
-                return(
-                    <div className = "coverLists" key = {i}>
-                        {info.listName}
-                    </div>
-                );
-            })}
-        </div>
-    );
-}
-*/
 const NavLists = (props) => {
     return(
         <ul>
-            {props.menus.map((menu, i) => {
-                return <li key = {i}> {menu} </li>
+            {props.menus.map((info, idx) => {
+                return(
+                    <li key = {idx}>
+                        {info.menuName}
+                    </li>
+                );
             })}
         </ul>
     );

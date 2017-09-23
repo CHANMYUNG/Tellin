@@ -9,7 +9,44 @@ class MainLayout extends Component{
             <div id = "mainWrapper">
                 <MainSideLayout/>
                 <div className = "sectionLayout">
-                    <MainHeaderLayout/>
+                    <MainHeaderLayout
+                    LeftImgs = {
+                        [
+                            {
+                                "ImgUrl" : require('../images/RESOURCE/Dashboard_Main/ic_left_arrow.png'),
+                                "ImgId" : "leftArrow",
+                                "ImgClass" : "headerLeftImgs"
+                            },
+                            {
+                                "ImgUrl" : require('../images/RESOURCE/Dashboard_Main/ic_menu.png'),
+                                "ImgId" : "headerMenu",
+                                "ImgClass" : "headerLeftImgs"
+                            },
+                            {
+                                "ImgUrl" : require('../images/RESOURCE/Dashboard_Main/ic_search.png'),
+                                "ImgId" : "headerSearch",
+                                "ImgClass" : "headerLeftImgs"
+                            }
+                        ]
+                    }
+
+                    RightImgs = {
+                        [
+                            {
+                                "ImgUrl" : require('../images/RESOURCE/Dashboard_Main/ic_log_out_gray.png'),
+                                "ImgId" : "headerLogout",
+                                "ImgClass" : "headerRightImgs"
+                            },         
+                            {
+                                "ImgUrl" : require('../images/RESOURCE/Dashboard_Main/ic_setting.png'),
+                                "ImgId" : "headerSetting",
+                                "ImgClass" : "headerRightImgs"
+                            }
+                                               
+                        ]
+                    }
+                    />
+
                     {this.props.children}
                 </div>
             </div>

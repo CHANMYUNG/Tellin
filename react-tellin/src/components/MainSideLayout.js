@@ -20,7 +20,7 @@ class MainSideBarLayout extends Component{
                 imgs[index].src = hoverImgs[index];
             });
             elem.addEventListener('mouseout', () => {
-                let hoverImgs = [
+                let defaultImgs = [
                     require('../images/RESOURCE/Dashboard_Main/ic_home_gray.png'),
                     require('../images/RESOURCE/Dashboard_Main/ic_love_gray.png'),
                     require('../images/RESOURCE/Dashboard_Main/ic_group_gray.png'),
@@ -29,7 +29,7 @@ class MainSideBarLayout extends Component{
                     require('../images/RESOURCE/Dashboard_Main/ic_more_gray.png')
                 ];
                 
-                imgs[index].src = hoverImgs[index];
+                imgs[index].src = defaultImgs[index];
             });
         });
     }
@@ -134,7 +134,7 @@ const NavImgs = (props) => {
             {props.navImgs.map((imgs, key) => {
                 return(
                     <div className = "navImgs" key = {key}>
-                        <img src = {imgs.ImgUrl} className = "imgs" id = {imgs.ImgName}/>
+                        <img src = {imgs.ImgUrl} className = "imgs" id = {imgs.ImgName} alt = "img"/>
 
                         <div className = "imgTitles" id = {imgs.IdName}>
                             {imgs.ImgTitle}
