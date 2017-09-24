@@ -11,7 +11,7 @@ class NavigationBar extends Component{
                         [
                             {
                                 "menuName" : "ABOUT",
-                                "Route" : "https://www.facebook.com"
+                                "Route" : "/"
                             },
                             {
                                 "menuName" : "REGISTER",
