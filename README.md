@@ -10,7 +10,7 @@ It's a web service project that people can communicate, share and empathize thei
 <h3>TELLIN<h3>
 <img src = "./Pages/LandingPage.jpg"/>
 
-
+<br><br><br>
 TELLIN 공식 페이지 : https://www.tellin.kr
 
 
