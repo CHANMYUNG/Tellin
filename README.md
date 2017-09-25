@@ -7,32 +7,11 @@ It's a web service project that people can communicate, share and empathize thei
 
 
 
-<h3>랜딩페이지(Landing Page)<h3>
+<h3>TELLIN<h3>
 <img src = "./Pages/LandingPage.jpg"/>
 
 
-<h3>회원가입(Sign-Up)</h3>
-<img src = "./Pages/SignUp.jpg"/>
+TELLIN 공식 페이지 : https://www.tellin.kr
 
 
-<h3>로그인(Login)</h3>
-<img src = "./Pages/Login.jpg"/>
-
-
-<h3>메인페이지(Main Page)</h3>
-<img src = "./Pages/MainPage.jpg"/>
-
-
-<h3>글 쓰기 관련 페이지들(Writing Pages)</h3>
-<img src = "./Pages/Writing.jpg"/>
----
-<img src = "./Pages/PageSetting.jpg"/>
-
-
-<h3>글 페이지(Writing Page)</h3>
-<img src = "./Pages/showWriting.jpg"/>
-
-
-<h3>마이페이지(My Page)</h3>
-<img src = "./Pages/MyPage.jpg"/>
 
