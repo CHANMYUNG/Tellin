@@ -64,7 +64,7 @@ class TypeForms extends Component{
         this.setState({
             labelVals : val
         });
-        console.log(this.state.labelVals);
+        //console.log(this.state.labelVals);
     }
 
     render(){
@@ -98,7 +98,8 @@ class ClickBtns extends Component{
                {this.props.Boxes.map((info, i) => {
                    return(
                         <div className = {info.ClassName}
-                             id = {info.IdName}>
+                             id = {info.IdName}
+                             key = {i}>
                              {info.BtnText}
                         </div>
                    );

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 class MainHeaderLayout extends Component{
-    constructor(props){
+    /*constructor(props){
         super(props);
-    }
+    }*/
 
     componentDidMount(){
         let headerMenu = document.getElementById('headerMenu');
