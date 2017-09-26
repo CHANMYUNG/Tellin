@@ -16,15 +16,15 @@ const root = document.getElementById('root');
 ReactDOM.render((
     <BrowserRouter>
         <div>
-            <switch>
-                <Route exact path='/' component={Landing}/> 
-                <Route path = "/register" component = {Register}/>
-                <Route path = "/login" component = {Login}/>
-                <MainLayout>
+            <Route exact path='/' component={Landing}/> 
+            <Route path = "/register" component = {Register}/>
+            <Route path = "/login" component = {Login}/>
+            <MainLayout>
+                <switch>
                     <Route path = "/test" component = {test}/>
-                </MainLayout>
-                <Route path="/post" component={PostingSetupModal}/>
-            </switch>
+                    <Route path="/post" component={PostingSetupModal}/>
+                </switch>
+            </MainLayout>
         </div>
     </BrowserRouter>
 ), root);
