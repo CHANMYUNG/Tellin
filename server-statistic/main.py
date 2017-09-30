@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, g
 from flask_restful_swagger_2 import Api
 from flask_cors import CORS
 from flask_jwt import JWT
@@ -12,9 +12,19 @@ CORS(app)
 @app.before_first_request
 def before_first_request():
     def initialize_logger():
-        pass
+        from logging.handlers import RotatingFileHandler
+        import logging
+
+        handler = RotatingFileHandler('server_log.log', maxBytes=1048576, backupCount=5)
+        handler.setFormatter(logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s'))
+
+        app.logger.addHandler(handler)
+        app.logger.setLevel(logging.INFO)
 
     initialize_logger()
+    g.logger = app.logger
+    g.logger.info('------ Logger Initialized ------')
+
 
 @app.before_request
 def before_request():
