@@ -1,4 +1,4 @@
-from flask import Flask, g
+from flask import Flask, g, request
 from flask_restful_swagger_2 import Api
 from flask_cors import CORS
 from flask_jwt import JWT
@@ -28,22 +28,29 @@ def before_first_request():
 
 @app.before_request
 def before_request():
-    pass
+    if 'logger' in g:
+        g.logger.info('Requested from {0} [ {1} {2} ]'.format(request.host, request.method, request.url))
+        g.logger.info('Request values : {0}'.format(request.values))
 
 
 @app.after_request
-def after_request():
-    pass
+def after_request(response):
+    if 'logger' in g:
+        g.logger.info('Respond : {0}'.format(response.status))
+
+    return response
 
 
 @app.teardown_request
-def teardown_request():
-    pass
+def teardown_request(exception):
+    if 'logger' in g and not exception:
+        g.logger.info('Teardown request successfully.')
 
 
 @app.teardown_appcontext
-def teardown_appcontext():
-    pass
+def teardown_appcontext(exception):
+    if 'logger' in g and not exception:
+        g.logger.info('Teardown appcontext successfully.')
 
 
 def route():
